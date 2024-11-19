@@ -44,6 +44,7 @@ public class MusicaService {
     if (musicaRepository.findById(id).orElse(null) == null) {
       return ResponseEntity.badRequest().build();
     }
+    musicaRepository.deleteById(id);
     return ResponseEntity.ok().build();
   }
 }

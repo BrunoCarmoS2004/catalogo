@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,19 +26,19 @@ public class DiscoController {
     return discoService.listarDiscos();
   }
   @GetMapping("/listar/{id}")
-  public ResponseEntity<Disco> listarPorId(long id){
+  public ResponseEntity<Disco> listarPorId(@PathVariable long id){
     return discoService.listarPorId(id);
   }
   @PostMapping("/criar")
-  public ResponseEntity<Disco> criarDisco(Disco disco){
+  public ResponseEntity<Disco> criarDisco(@RequestBody Disco disco){
     return discoService.criarDisco(disco);
   }
   @PutMapping("/atualizar/{id}")
-  public ResponseEntity<Disco> atualizarDisco(Disco disco, long id){
+  public ResponseEntity<Disco> atualizarDisco(@RequestBody Disco disco,@PathVariable long id){
     return discoService.atualizarDisco(disco, id);
   }
   @DeleteMapping("/excluir/{id}")
-  public ResponseEntity<Disco> excluirDisco(long id){
+  public ResponseEntity<Disco> excluirDisco(@PathVariable long id){
     return discoService.excluirDisco(id);
   }
 }

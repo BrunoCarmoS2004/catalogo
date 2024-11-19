@@ -45,6 +45,7 @@ public class ArtistaService {
     if (artistasRepository.findById(id).orElse(null) == null) {
       return ResponseEntity.badRequest().build();
     }
+    artistasRepository.deleteById(id);
     return ResponseEntity.ok().build();
   }
 }

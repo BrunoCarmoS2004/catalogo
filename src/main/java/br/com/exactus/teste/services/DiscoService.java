@@ -44,6 +44,7 @@ public class DiscoService {
     if (discoRepository.findById(id).orElse(null) == null) {
       return ResponseEntity.badRequest().build();
     }
+    discoRepository.deleteById(id);
     return ResponseEntity.ok().build();
   }
 }
