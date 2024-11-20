@@ -21,4 +21,8 @@ public class Musica {
 	private String lancamento;
 	
 	private long discoId;
+	
+	private Genero genero;
+	
+	private String url;
 }

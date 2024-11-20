@@ -2,6 +2,7 @@ package br.com.exactus.teste.models;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,8 +27,13 @@ public class Disco {
 	@Lob
 	private String capa;
 	
-	@OneToMany(mappedBy = "discoId")
+	private Genero genero;
+	
+	@OneToMany(mappedBy = "discoId", cascade = CascadeType.ALL)
 	private List<Musica> musicas;
+	
+	private int qtdMusicas = 0;
+
 	
 	private long artistaId;
 	}

@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import br.com.exactus.teste.models.Artista;
+import br.com.exactus.teste.models.Genero;
 import br.com.exactus.teste.repositorys.ArtistasRepository;
 
 @Service
@@ -47,5 +48,14 @@ public class ArtistaService {
     }
     artistasRepository.deleteById(id);
     return ResponseEntity.ok().build();
+  }
+  
+  public ResponseEntity<List<Artista>> buscarPorNome(String nome){
+	  nome = "%"+nome+"%";
+	  return ResponseEntity.ok(artistasRepository.findByNomeLike(nome));
+  }
+  
+  public ResponseEntity<List<Artista>> buscarPorGenero(Genero genero){
+	  return ResponseEntity.ok(artistasRepository.findAllByGenero(genero));
   }
 }

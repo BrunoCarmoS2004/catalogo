@@ -1,6 +1,7 @@
 package br.com.exactus.teste.models;
 
 public enum Genero {
+	//A Ideia de fazer o enum com generos foi 100% minha, mas pedi para o Chat agilizar fazendo os nomes.
 	ROCK("Rock"),
     POP("Pop"),
     JAZZ("Jazz"),

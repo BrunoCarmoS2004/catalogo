@@ -2,12 +2,14 @@ package br.com.exactus.teste.models;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
+import lombok.Builder.Default;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -22,9 +24,11 @@ public class Artista {
 	
 	private String nome;
 	
+	private int qtdDiscos = 0;
+	
 	private Genero genero;
 	
-	@OneToMany(mappedBy = "artistaId")
+	@OneToMany(mappedBy = "artistaId", cascade = CascadeType.ALL)
 	private List<Disco> disco;
 }
 

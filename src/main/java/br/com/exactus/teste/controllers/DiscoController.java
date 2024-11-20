@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.exactus.teste.models.Artista;
 import br.com.exactus.teste.models.Disco;
+import br.com.exactus.teste.models.Genero;
 import br.com.exactus.teste.services.DiscoService;
 
 @RestController
@@ -40,5 +42,20 @@ public class DiscoController {
   @DeleteMapping("/excluir/{id}")
   public ResponseEntity<Disco> excluirDisco(@PathVariable long id){
     return discoService.excluirDisco(id);
+  }
+  
+  @GetMapping("/listar/titulo/{titulo}")
+  public ResponseEntity<List<Disco>> buscarPorTitulo(@PathVariable String titulo){
+    return discoService.buscarPorTitulo(titulo);
+  }
+		  
+  @GetMapping("/listar/genero/{genero}")
+  public ResponseEntity<List<Disco>> buscarPorGenero(@PathVariable Genero genero){
+    return discoService.buscarPorGenero(genero);
+  }
+  
+  @GetMapping("/listar/artista/{artistaId}")
+  public ResponseEntity<List<Disco>> buscarPorArtista(@PathVariable long artistaId){
+    return discoService.buscarPorArtista(artistaId);
   }
 }

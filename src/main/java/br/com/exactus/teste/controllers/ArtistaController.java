@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.exactus.teste.models.Artista;
+import br.com.exactus.teste.models.Genero;
 import br.com.exactus.teste.services.ArtistaService;
 
 @RestController
@@ -41,5 +42,15 @@ public class ArtistaController {
   @DeleteMapping("/excluir/{id}")
   public ResponseEntity<Artista> excluirArtista(@PathVariable long id){
     return artistaService.excluirArtista(id);
+  }
+  
+  @GetMapping("/listar/nome/{nome}")
+  public ResponseEntity<List<Artista>> buscarPorNome(@PathVariable String nome){
+    return artistaService.buscarPorNome(nome);
+  }
+		  
+  @GetMapping("/listar/genero/{genero}")
+  public ResponseEntity<List<Artista>> buscarPorGenero(@PathVariable Genero genero){
+    return artistaService.buscarPorGenero(genero);
   }
 }
