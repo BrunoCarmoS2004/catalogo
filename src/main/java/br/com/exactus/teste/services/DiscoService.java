@@ -33,11 +33,6 @@ public class DiscoService {
     if (disco == null) {
       return ResponseEntity.badRequest().build();
     }
-    Artista artista = artistasRepository.findById(disco.getArtistaId()).orElse(null); 
-    if (artista == null) {
-		return ResponseEntity.badRequest().build();
-	}
-    artista.setQtdDiscos(artista.getQtdDiscos() + 1);
     return ResponseEntity.ok(discoRepository.save(disco));
   }
 
@@ -46,16 +41,6 @@ public class DiscoService {
     if (discoAntigo == null) {
       return ResponseEntity.badRequest().build();
     }
-    Artista artistaAntigo = artistasRepository.findById(discoAntigo.getArtistaId()).orElse(null);  
-    artistaAntigo.setQtdDiscos(artistaAntigo.getQtdDiscos() - 1);
-    Artista artistaNovo = artistasRepository.findById(discoNovo.getArtistaId()).orElse(null); 
-    
-    if (artistaNovo == null) {
-		return ResponseEntity.badRequest().build();
-	}
-    artistaAntigo.setQtdDiscos(artistaAntigo.getQtdDiscos() + 1);
-    artistasRepository.save(artistaAntigo);
-    artistasRepository.save(artistaNovo);
     discoNovo.setId(id);
     return ResponseEntity.ok(discoRepository.save(discoNovo));
   }
@@ -65,9 +50,6 @@ public class DiscoService {
     if (disco == null) {
       return ResponseEntity.badRequest().build();
     }
-    Artista artista = artistasRepository.findById(disco.getArtistaId()).orElse(null);
-    artista.setQtdDiscos(artista.getQtdDiscos() - 1);
-    artistasRepository.save(artista);
     discoRepository.deleteById(id);
     return ResponseEntity.ok().build();
   }
@@ -77,7 +59,7 @@ public class DiscoService {
   }
   
   public ResponseEntity<List<Disco>> buscarPorGenero(Genero genero){
-	  return ResponseEntity.ok(discoRepository.findAllByGenero(genero));
+	  return ResponseEntity.ok(discoRepository.findAllByGeneros(genero));
   }
   
   public ResponseEntity<List<Disco>> buscarPorTitulo(String nome){

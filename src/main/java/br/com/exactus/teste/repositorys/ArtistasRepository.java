@@ -9,5 +9,5 @@ import br.com.exactus.teste.models.Genero;
 
 public interface ArtistasRepository extends JpaRepository<Artista, Long>{
 	List<Artista> findByNomeLike(String nome);
-	List<Artista> findAllByGenero(Genero genero);
+	List<Artista> findAllByGeneros(Genero generos);
 }

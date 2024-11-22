@@ -9,6 +9,6 @@ import br.com.exactus.teste.models.Musica;
 
 public interface MusicaRepository extends JpaRepository<Musica, Long>{
 	List<Musica> findByNomeLike(String nome);
-	List<Musica> findAllByGenero(Genero genero);
+	List<Musica> findAllByGeneros(Genero generos);
 	List<Musica> findAllByDiscoId(long discoId);
 }

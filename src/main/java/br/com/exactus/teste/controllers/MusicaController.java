@@ -58,4 +58,9 @@ public class MusicaController {
   public ResponseEntity<List<Musica>> buscarPorDisco(@PathVariable long discoId){
     return musicaService.buscarPorDisco(discoId);
   }
+  
+  @PutMapping("/vincular/{musicaId}/{discoId}")
+  public ResponseEntity<?> vincularDisco(@PathVariable long musicaId, @PathVariable long discoId){
+	  return musicaService.vincularDisco(musicaId, discoId);
+  }
 }

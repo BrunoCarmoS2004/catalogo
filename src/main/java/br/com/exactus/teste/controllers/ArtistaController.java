@@ -53,4 +53,9 @@ public class ArtistaController {
   public ResponseEntity<List<Artista>> buscarPorGenero(@PathVariable Genero genero){
     return artistaService.buscarPorGenero(genero);
   }
+  
+  @PutMapping("/vincular/{artistaId}/{discoId}")
+  public ResponseEntity<?> vincularDisco(@PathVariable long artistaId, @PathVariable long discoId){
+	  return artistaService.vincularDisco(artistaId, discoId);
+  }
 }

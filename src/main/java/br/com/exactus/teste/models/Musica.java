@@ -1,5 +1,8 @@
 package br.com.exactus.teste.models;
 
+import java.util.Set;
+
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,9 +23,10 @@ public class Musica {
 	
 	private String lancamento;
 	
-	private long discoId;
+	private long discoId = 0;
 	
-	private Genero genero;
+	@ElementCollection
+    private Set<Genero> generos;
 	
 	private String url;
 }

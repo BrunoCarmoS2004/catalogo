@@ -1,15 +1,16 @@
 package br.com.exactus.teste.models;
 
 import java.util.List;
+import java.util.Set;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
-import lombok.Builder.Default;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -26,7 +27,8 @@ public class Artista {
 	
 	private int qtdDiscos = 0;
 	
-	private Genero genero;
+	@ElementCollection
+    private Set<Genero> generos;
 	
 	@OneToMany(mappedBy = "artistaId", cascade = CascadeType.ALL)
 	private List<Disco> disco;
