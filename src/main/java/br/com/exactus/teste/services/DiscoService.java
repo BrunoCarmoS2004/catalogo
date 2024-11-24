@@ -46,9 +46,13 @@ public class DiscoService {
   }
 
   public ResponseEntity<Disco> excluirDisco(long id){
-	Disco disco = discoRepository.findById(id).orElse(null);
+	  Disco disco = discoRepository.findById(id).orElse(null);
     if (disco == null) {
       return ResponseEntity.badRequest().build();
+    }
+    Artista artista = artistasRepository.findById(disco.getArtistaId()).orElse(null);
+    if (artista != null) {
+      artista.setQtdDiscos(artista.getQtdDiscos() - 1);
     }
     discoRepository.deleteById(id);
     return ResponseEntity.ok().build();

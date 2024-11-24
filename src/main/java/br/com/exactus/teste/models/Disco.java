@@ -37,6 +37,5 @@ public class Disco {
 	
 	private int qtdMusicas = 0;
 
-	
 	private long artistaId = 0;
 	}

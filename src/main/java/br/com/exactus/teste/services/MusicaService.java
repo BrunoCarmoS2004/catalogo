@@ -53,8 +53,10 @@ public class MusicaService {
       return ResponseEntity.badRequest().build();
     }
     Disco disco = discoRepository.findById(musica.getDiscoId()).orElse(null);
-    disco.setQtdMusicas(disco.getQtdMusicas() - 1);
-    discoRepository.save(disco);
+    if (disco != null) {
+      disco.setQtdMusicas(disco.getQtdMusicas() - 1);
+      discoRepository.save(disco);
+    }
     musicaRepository.deleteById(id);
     return ResponseEntity.ok().build();
   }

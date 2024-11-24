@@ -28,7 +28,7 @@ public class Artista {
 	private int qtdDiscos = 0;
 	
 	@ElementCollection
-    private Set<Genero> generos;
+  private Set<Genero> generos;
 	
 	@OneToMany(mappedBy = "artistaId", cascade = CascadeType.ALL)
 	private List<Disco> disco;
