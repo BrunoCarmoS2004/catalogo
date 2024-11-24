@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.exactus.teste.models.Artista;
 import br.com.exactus.teste.models.Disco;
 import br.com.exactus.teste.models.Genero;
 import br.com.exactus.teste.services.DiscoService;
