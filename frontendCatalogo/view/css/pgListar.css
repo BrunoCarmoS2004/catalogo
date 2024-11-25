@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+  height: 100%;  
+  margin: 0;     
+  padding: 0;    
+  font-family: "Bokor", system-ui;
+}
+
+body {
+  display: flex;         
+  background-color: black;  
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  color:white;
+}
+
+.backgroundBlur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imgs/festa3.webp");
+  background-size: cover;
+  filter: blur(10px);  
+  z-index: -2; 
+}
+.backgroundBlurDisco {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imgs/PlanodeFundoDisco.webp");
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -2;
+}
+
+.backgroundBlurMusica{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imgs/PlanoDeFundoArtista.webp");
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -2;
+}
+
+.lista{
+  margin-left: 20px;
+}
+a{
+  font-size: 40px;
+  color: rgb(104, 0, 0);
+  text-decoration: none;
+  transform: perspective(600px) translateZ(0);
+  text-decoration: underline;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+a:hover{
+  color: rgb(255, 0, 0);
+  transform: perspective(600px) translateZ(50px); 
+
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Musica</title>
+  <link rel="stylesheet" href="../../css/pgCriar.css">
+</head>
+<body>
+  <main>
+    <div class="backgroundBlurMusica"></div>
+    <div class="discoFundoCriar">
+      <img src="../../imgs/discoparado.png" alt="">
+    </div>
+    <div class="paiOpcoes">
+      <div class="divOpcoes">
+        <div class="opcoes">
+          <h1 class="titulo">Criar Nova Musica</h1>
+          <form id="form">
+            <label for="nome">Nome da Musica:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite o nome da musica" required>
+            <div class="capaAno">
+              <div class="inputCapa">
+                <label for="url">URL Muscia:</label>
+                <input type="text" id="url" name="url" placeholder="URL da Musica" required>
+              </div>
+              <div class="inputAno">
+                <label for="lancamento">Lançamento:</label>
+                <input type="text" id="lancamento" name="lancamento" placeholder="Ano de lanchamento" required>
+              </div>
+            </div>
+          
+            <label for="generos">Gêneros:</label>
+            <select id="generos" name="generos" multiple required>
+              <option value="ROCK">Rock</option>
+              <option value="POP">Pop</option>
+              <option value="JAZZ">Jazz</option>
+              <option value="CLASSICA">Clássica</option>
+              <option value="HIPHOP">Hip-Hop</option>
+              <option value="BLUES">Blues</option>
+              <option value="REGGAE">Reggae</option>
+              <option value="METAL">Metal</option>
+              <option value="ELETRONICA">Eletrônica</option>
+              <option value="COUNTRY">Country</option>
+              <option value="SAMBA">Samba</option>
+              <option value="BOSSA_NOVA">Bossa Nova</option>
+              <option value="MPB">Música Popular Brasileira (MPB)</option>
+              <option value="FUNK">Funk</option>
+              <option value="SERTANEJO">Sertanejo</option>
+              <option value="FORRO">Forró</option>
+              <option value="GOSPEL">Gospel</option>
+              <option value="PAGODE">Pagode</option>
+              <option value="RAP">Rap</option>
+              <option value="KPOP">K-Pop</option>
+            </select>
+          
+            <button type="submit">Criar Musica</button>
+          </form>
+          <a href="pgOpMusica.html">Voltar</a>          
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="../../js/musica/musicaCriar.js"></script>
+</body>
+</html>

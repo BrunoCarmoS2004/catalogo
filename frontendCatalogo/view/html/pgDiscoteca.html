@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa de Artistas, Discos e Músicas</title>
+  <link rel="stylesheet" href="../css/discoteca.css">
+</head>
+<body>
+  <main>
+    <audio id="audioPlayer"></audio>
+
+    <div class="backgroundBlur"></div>
+          <div class="discoFundoCriar">
+            <img src="../imgs/music-unscreen.gif" alt="">
+          </div>
+        </div>
+    <div class="paiOpcoes">
+        <div class="container">
+          <div class="search-bar">
+            <a href="pgPrincipal.html">Voltar</a>
+            <select id="search-type">
+              <option value="artista">Artista</option>
+              <option value="disco">Disco</option>
+              <option value="musica">Música</option>
+              <option value="genero">Genero</option>
+            </select>
+            <input type="text" id="search-input" placeholder="Digite o termo de pesquisa" />
+            <button id="search-button">Pesquisar</button>
+          </div>
+          <div id="result" class="result-container"></div>
+    
+    </div>
+  </main>
+<script src="../js/discoteca.js"></script>
+</body>
+</html>

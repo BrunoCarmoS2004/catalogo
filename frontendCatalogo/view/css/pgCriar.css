@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+html, body {
+  height: 100%;  
+  margin: 0;     
+  padding: 0;    
+  overflow: hidden;
+  font-family: "Bokor", system-ui;
+
+}
+body{
+  background-color: black;
+
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.paiOpcoes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; 
+  justify-content: center; /
+}
+ 
+.divOpcoes {
+  width: 90%; 
+  max-width: 400px;
+  height: auto; 
+  padding: 20px; 
+  background-color: rgba(122, 122, 122, 0.151); 
+  border-radius: 50px; 
+  color: rgb(167, 0, 0);
+  font-size: 30px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+}
+
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 15px; 
+  width: 100%; 
+}
+
+.capaAno {
+  display: flex;
+  gap: 10px; 
+  width: 100%; 
+}
+
+.inputCapa, .inputAno {
+  flex: 1; 
+}
+
+label{
+  font-size: 40px;
+
+}
+
+#form input,
+#form select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgb(104, 0, 0);
+  transition: background-color 0.3s ease;
+}
+
+#form button:hover {
+  background-color:rgb(255, 0, 0);
+}
+
+a{
+  display: block;
+  text-align: center;
+  font-size: 40px;
+  color: rgb(104, 0, 0);
+  text-decoration: none;
+  transform: perspective(600px) translateZ(0);
+  text-decoration: underline;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+a:hover{
+  color: rgb(255, 0, 0);
+  transform: perspective(600px) translateZ(50px); 
+
+}
+.opcoes h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.backgroundBlur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imgs/festa3.webp");
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -2;
+}
+.backgroundBlurDisco {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imgs/PlanodeFundoDisco.webp");
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -2;
+}
+
+.backgroundBlurMusica{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imgs/PlanoDeFundoArtista.webp");
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -2;
+}
+
+.discoFundoCriar {
+  position: absolute;
+  z-index: -1;
+}
+
+img {
+  animation: rotacao 3s linear infinite;
+}
+
+@keyframes rotacao {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
