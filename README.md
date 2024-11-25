@@ -1,4 +1,4 @@
-Mais de 14 horas codando, Sabado e Domingo (Foto só de domingo, pq eu descobri que o vs code conta tbm no domingo)🧨
++ ou - 20 minutos no backend (Trabalho com isso) e mais de 14 horas codando front end ;-;, Sabado e Domingo (Foto só de domingo, pq eu descobri que o vs code conta tbm no domingo)🧨
 
 ![Horas Codando](https://github.com/BrunoCarmoS2004/catalogo/blob/main/frontendCatalogo/view/imgs/horasDomingo.png)
 
