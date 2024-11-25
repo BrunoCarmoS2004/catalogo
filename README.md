@@ -1,6 +1,6 @@
 Mais de 14 horas codando, Sabado e Domingo 🧨(Foto só de domingo, pq eu descobri que o vs code conta tbm no domingo)
 
-![Horas Codando]([https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png](https://github.com/BrunoCarmoS2004/catalogo/blob/main/frontendCatalogo/view/imgs/horasDomingo.png))
+![Horas Codando](https://github.com/BrunoCarmoS2004/catalogo/blob/main/frontendCatalogo/view/imgs/horasDomingo.png)
 
 
 O usuário poderá cadastrar novos discos, informando título, ano de lançamento, capa e faixas. ✔
