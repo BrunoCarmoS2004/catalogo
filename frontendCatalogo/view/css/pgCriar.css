@@ -40,7 +40,7 @@ main {
   background-color: rgba(122, 122, 122, 0.151); 
   border-radius: 50px; 
   color: rgb(167, 0, 0);
-  font-size: 30px;
+  font-size: 1.5rem;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@ main {
 }
 
 label{
-  font-size: 40px;
+  font-size: 2rem;
 
 }
 
@@ -100,7 +100,7 @@ label{
 a{
   display: block;
   text-align: center;
-  font-size: 40px;
+  font-size: 2rem;
   color: rgb(104, 0, 0);
   text-decoration: none;
   transform: perspective(600px) translateZ(0);

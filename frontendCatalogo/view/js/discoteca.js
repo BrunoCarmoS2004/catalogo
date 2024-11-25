@@ -65,6 +65,7 @@ function renderGenero(artistas, discos, musicas) {
     discoColumn.className = "column";
     discoColumn.innerHTML = `
       <h2>${disco.titulo}</h2>
+      <img src="${disco.capa}" alt="Capa" style="width: 50px; height: 50px;">
       <p>Ano de Lançamento: ${disco.anoLancamento}</p>
       <p>Gêneros: ${disco.generos.join(", ")}</p>
     `;
@@ -107,6 +108,7 @@ function renderArtista(artistas) {
   artista.disco.forEach(disco => {
     discosColumn.innerHTML += `
       <h3>${disco.titulo}</h3>
+      <img src="${disco.capa}" alt="Capa" style="width: 50px; height: 50px;">
       <p>Ano: ${disco.anoLancamento}</p>
       <p>Músicas: ${disco.qtdMusicas}</p>
     `;
@@ -139,6 +141,7 @@ function renderDisco(discos) {
     discoColumn.className = "column";
     discoColumn.innerHTML = `
       <h2>${disco.titulo}</h2>
+      <img src="${disco.capa}" alt="Capa" style="width: 50px; height: 50px;">
       <p>Ano de Lançamento: ${disco.anoLancamento}</p>
       <p>Gêneros: ${disco.generos.join(", ")}</p>
     `;

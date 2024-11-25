@@ -5,7 +5,6 @@ html, body {
   height: 100%;  
   margin: 0;     
   padding: 0;    
-  overflow: hidden;
   font-family: "Bokor", system-ui;
  
 }
@@ -64,20 +63,11 @@ img {
   justify-content: space-evenly;
   flex-direction: column;
   color: rgb(167, 0, 0);
-  font-size: 30px;
-
-}
-
-.opcoes{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 20px;
+  font-size: 1rem;
 }
 
 a{
-  font-size: 40px;
+  font-size: 2rem;
   color: rgb(104, 0, 0);
   text-decoration: none;
   transform: perspective(600px) translateZ(0);
@@ -88,6 +78,14 @@ a:hover{
   color: rgb(255, 0, 0);
   transform: perspective(600px) translateZ(50px); 
 
+}
+
+.opcoes{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
 }
 
 @keyframes rotacao {
